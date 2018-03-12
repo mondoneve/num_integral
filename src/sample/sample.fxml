@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <LineChart fx:id="chart" layoutX="191.0" layoutY="86.0" prefHeight="307.0" prefWidth="395.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="runBtn" layoutX="340.0" layoutY="24.0" mnemonicParsing="false" onAction="#solve" text="Считать" />
+      <Pane fx:id="seletor1Pane" layoutX="14.0" layoutY="14.0" prefHeight="69.0" prefWidth="283.0">
+         <children>
+            <ComboBox fx:id="funcCB" layoutX="12.0" layoutY="2.0" prefWidth="150.0" />
+            <ComboBox fx:id="methCB" layoutX="12.0" layoutY="39.0" prefWidth="150.0" />
+            <Label layoutX="171.0" layoutY="6.0" text="Выбор функции" />
+            <Label layoutX="171.0" layoutY="43.0" text="Выбор метода" />
+         </children>
+      </Pane>
+      <Label fx:id="numericalResLabel" layoutX="14.0" layoutY="98.0" text="Численное:" />
+      <Label fx:id="trueResLabel" layoutX="14.0" layoutY="115.0" text="Точное:" />
+      <Label fx:id="errorLabel" layoutX="14.0" layoutY="132.0" text="Ошибка:" />
+      <Label fx:id="nLabel" layoutX="443.0" layoutY="16.0" text="Разбиений:" />
+      <TextField fx:id="nTB" layoutX="512.0" layoutY="12.0" prefHeight="25.0" prefWidth="43.0" text="10" />
+   </children>
+</Pane>
